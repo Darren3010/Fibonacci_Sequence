@@ -55,9 +55,9 @@ end;
 
 function TForm2.Fibonacci(Number: Integer): Int64;
 VAR
-  I, N1, N2, N: Integer;
+  I, Num1, Num2, Num: Integer;
 begin
-  N := 0;
+  Num := 0;
   if Number < 0 then
   begin
     showmessage('The Fibonacci Sequence is undefined for negative numbers.');
@@ -71,15 +71,15 @@ begin
       Result := 1;
   else
     begin
-      N1 := 0;
-      N2 := 1;
+      Num1 := 0;
+      Num2 := 1;
       for I := 2 to Number do
       begin
-        N := N1 + N2;
-        N1 := N2;
-        N2 := N;
+        Num := Num1 + Num2;
+        Num1 := Num2;
+        Num2 := Num;
       end;
-      Result := N;
+      Result := Num;
     end;
 
   end;
